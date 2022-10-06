@@ -22,7 +22,7 @@ public class KhachHangServiceImplement implements KhachHangService {
     @Override
     public List<KhachHangDto> findAll() {
         List<KhachHangDto>  listKhachHangDTO= new ArrayList<>();
-        List<KhachHang> listKhachHang= khachHangRepo.findAll();
+        List<KhachHang> listKhachHang= khachHangRepo.getgetAllKhachHang();
         for (int i=0;i<listKhachHang.size();i++)
             listKhachHangDTO.add(khachHangConverter.toDto(listKhachHang.get(i)));
         return listKhachHangDTO;
